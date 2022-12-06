@@ -16,7 +16,7 @@ import com.plcoding.stockmarketapp.domain.model.CompanyListing
 @Composable
 fun CompanyItem(
     company: CompanyListing,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier,
@@ -30,7 +30,7 @@ fun CompanyItem(
             ) {
                 Text(
                     text = company.name,
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                     color = MaterialTheme.colors.onBackground,
                     overflow = TextOverflow.Ellipsis,
@@ -43,13 +43,13 @@ fun CompanyItem(
                     fontWeight = FontWeight.Light,
                     color = MaterialTheme.colors.onBackground
                 )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "(${company.symbol})",
-                    fontStyle = FontStyle.Italic,
-                    color = MaterialTheme.colors.onBackground
-                )
             }
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "(${company.symbol})",
+                fontStyle = FontStyle.Italic,
+                color = MaterialTheme.colors.onBackground
+            )
         }
     }
 }

@@ -20,16 +20,14 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @Composable
 @Destination(start = true)
-fun CompanyListingScreen(
+fun CompanyListingsScreen(
     navigator: DestinationsNavigator,
     viewModel: CompanyListingsViewModel = hiltViewModel()
 ) {
     val swipeRefreshState = rememberSwipeRefreshState(
         isRefreshing = viewModel.state.isRefreshing
     )
-
     val state = viewModel.state
-
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
